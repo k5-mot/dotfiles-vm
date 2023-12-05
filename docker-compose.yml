@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dotfiles:
+    image: k5mot/dotfiles-vm:latest
+    volumes:
+      - type: bind
+        source: /home
+        target: /home
+      - type: bind
+        source: $HOME/.ssh
+        target: /root/.ssh
